@@ -232,13 +232,128 @@ z-index:100;
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            :root { --gap-gigante: 450px; }
-            .line-separator { width: 200px; } /* Ajuste en mobile */
-            .nav-links { display: none; }
-            .hero h1 { font-size: 3.5rem; }
-            .about-img, .about-text { min-width: 100%; }
-        }
+@media (max-width: 768px) {
+
+    :root {
+        --gap-gigante: 450px;
+    }
+
+    .line-separator {
+        width: 200px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-img,
+    .about-text {
+        min-width: 100%;
+    }
+
+
+    /* =========================
+       PRODUCTOS EN CELULAR
+       ========================= */
+
+    .product-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    .product-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 6px 4px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* CAJA DE LA FOTO */
+    .product-img-container {
+        width: 100% !important;
+        height: 120px !important;
+        min-height: 120px !important;
+        max-height: 120px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        background: white !important;
+        box-sizing: border-box !important;
+    }
+
+    /* FOTO */
+    .product-card img {
+        width: 100% !important;
+        height: 100px !important;
+        max-width: 100% !important;
+        max-height: 100px !important;
+        object-fit: contain !important;
+        padding: 4px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* INFORMACIÓN */
+    .product-info {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* NOMBRE */
+    .product-info h3 {
+        font-size: 0.62rem !important;
+        line-height: 1.15 !important;
+        margin: 8px 0 6px !important;
+        padding: 0 !important;
+        text-align: center !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* PRECIO */
+    .product-info .price {
+        display: block !important;
+        font-size: 0.72rem !important;
+        line-height: 1 !important;
+        margin: 6px 0 9px !important;
+        padding: 0 !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    /* BOTÓN */
+    .product-info .btn-buy {
+        display: block !important;
+        width: 92% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
+        padding: 8px 1px !important;
+        font-size: 0.52rem !important;
+        line-height: 1 !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+        border-radius: 3px !important;
+    }
+}
 .imagen-circular{
     width:150px;
     height:150px;
@@ -289,97 +404,6 @@ z-index:100;
     color:white;
     font-size:1.05rem;
     line-height:1.8;
-}
-
-/* CELULAR Y TABLET */
-@media (max-width:768px){
-
-    .about-container{
-        grid-template-columns:1fr;
-        gap:35px;
-        text-align:center;
-    }
-
-    .about-image img{
-        width:90%;
-        max-width:400px;
-        height:400px;
-    }
-
-    .about-text .section-title{
-        text-align:center !important;
-    }
-
-}
-@media (max-width: 768px) {
-
-    .product-grid {
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 8px !important;
-        padding: 0 8px !important;
-    }
-
-    .product-card {
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 8px 4px !important;
-        overflow: hidden !important;
-        box-sizing: border-box !important;
-    }
-
-    .product-img-container {
-        width: 100% !important;
-        height: 90px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        overflow: hidden !important;
-        background: white !important;
-    }
-
-    .product-card img {
-        width: 100% !important;
-        height: 80px !important;
-        object-fit: contain !important;
-        padding: 4px !important;
-        display: block !important;
-    }
-
-    .product-info {
-        width: 100% !important;
-        min-width: 0 !important;
-        text-align: center !important;
-    }
-
-    .product-info h3 {
-        font-size: 0.65rem !important;
-        line-height: 1.15 !important;
-        margin: 8px 0 5px !important;
-        text-align: center !important;
-        overflow-wrap: break-word !important;
-        word-break: normal !important;
-    }
-
-    .product-info .price {
-        font-size: 0.75rem !important;
-        line-height: 1 !important;
-        margin: 5px 0 8px !important;
-        display: block !important;
-        text-align: center !important;
-        white-space: nowrap !important;
-    }
-
-    .product-info .btn-buy {
-        width: 90% !important;
-        margin: 0 auto !important;
-        padding: 7px 1px !important;
-        font-size: 0.55rem !important;
-        line-height: 1 !important;
-        white-space: nowrap !important;
-        display: block !important;
-        box-sizing: border-box !important;
-    }
 }
     </style>
 </head>
