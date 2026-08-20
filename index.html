@@ -231,11 +231,11 @@ z-index:100;
         .reveal { opacity: 0; transform: translateY(80px); transition: 1.2s all ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- MOBILE --- */
+     /* --- MOBILE --- */
 @media (max-width: 768px) {
 
     :root {
-        --gap-gigante: 450px;
+        --gap-gigante: 100px;
     }
 
     .line-separator {
@@ -250,108 +250,71 @@ z-index:100;
         font-size: 3.5rem;
     }
 
-    .about-img,
-    .about-text {
-        min-width: 100%;
+    .about-container{
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-
     /* =========================
-       PRODUCTOS EN CELULAR
+       PRODUCTOS EN CELULAR - FIX
        ========================= */
-
-    .product-grid {
+    
+    .products-grid {
         display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-        gap: 8px !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas, no 4 */
+        gap: 12px !important;
         width: 100% !important;
-        padding: 0 8px !important;
+        padding: 0 12px !important;
         box-sizing: border-box !important;
     }
 
     .product-card {
         width: 100% !important;
-        min-width: 0 !important;
-        height: auto !important;
-        min-height: 0 !important;
-        padding: 6px 4px !important;
+        padding: 8px !important;
         margin: 0 !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
     }
 
-    /* CAJA DE LA FOTO */
+    /* CAJA DE LA FOTO - ahora es cuadrada y grande */
     .product-img-container {
         width: 100% !important;
-        height: 150px !important;
-        min-height: 150px !important;
-        max-height: 150px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: 1 / 1 !important; /* esto hace que la foto sea grande */
+        padding: 10px !important;
         display: flex !important;
-        justify-content: center !important;
         align-items: center !important;
-        overflow: hidden !important;
-        background: white !important;
-        box-sizing: border-box !important;
+        justify-content: center !important;
     }
 
-    /* FOTO */
+    /* FOTO - ocupa toda la caja */
+    .product-img-container img,
     .product-card img {
-        width: 130% !important;
-        height: 170px !important;
-        max-width: 130% !important;
-        max-height: 170px !important;
-        object-fit: contain !important;
-        padding: 4px !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* INFORMACIÓN */
-    .product-info {
         width: 100% !important;
-        min-width: 0 !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
         padding: 0 !important;
-        margin: 0 !important;
-        text-align: center !important;
-        box-sizing: border-box !important;
     }
 
-    /* NOMBRE */
+    /* INFO - esto lo dejamos como vos querias */
     .product-info h3 {
         font-size: 0.62rem !important;
         line-height: 1.15 !important;
         margin: 8px 0 6px !important;
-        padding: 0 !important;
-        text-align: center !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
+        min-height: 32px;
     }
 
-    /* PRECIO */
     .product-info .price {
-        display: block !important;
-        font-size: 0.72rem !important;
-        line-height: 1 !important;
+        font-size: 0.85rem !important;
         margin: 6px 0 9px !important;
-        padding: 0 !important;
-        text-align: center !important;
-        white-space: nowrap !important;
     }
 
-    /* BOTÓN */
     .product-info .btn-buy {
-        display: block !important;
-        width: 92% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 auto !important;
-        padding: 8px 1px !important;
-        font-size: 0.52rem !important;
-        line-height: 1 !important;
-        text-align: center !important;
-        white-space: nowrap !important;
-        box-sizing: border-box !important;
-        border-radius: 3px !important;
+        width: 100% !important;
+        font-size: 0.6rem !important;
+        padding: 10px 2px !important;
     }
 }
 .imagen-circular{
