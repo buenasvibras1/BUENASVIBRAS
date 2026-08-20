@@ -311,6 +311,76 @@ z-index:100;
     }
 
 }
+@media (max-width: 768px) {
+
+    .product-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+        padding: 0 8px !important;
+    }
+
+    .product-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 8px 4px !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .product-img-container {
+        width: 100% !important;
+        height: 90px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        background: white !important;
+    }
+
+    .product-card img {
+        width: 100% !important;
+        height: 80px !important;
+        object-fit: contain !important;
+        padding: 4px !important;
+        display: block !important;
+    }
+
+    .product-info {
+        width: 100% !important;
+        min-width: 0 !important;
+        text-align: center !important;
+    }
+
+    .product-info h3 {
+        font-size: 0.65rem !important;
+        line-height: 1.15 !important;
+        margin: 8px 0 5px !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    .product-info .price {
+        font-size: 0.75rem !important;
+        line-height: 1 !important;
+        margin: 5px 0 8px !important;
+        display: block !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    .product-info .btn-buy {
+        width: 90% !important;
+        margin: 0 auto !important;
+        padding: 7px 1px !important;
+        font-size: 0.55rem !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+}
     </style>
 </head>
 <body>
